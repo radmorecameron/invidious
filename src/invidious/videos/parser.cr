@@ -441,7 +441,7 @@ module Invidious::Videos::Parser
       # Description
       "description"      => JSON::Any.new(description || ""),
       "descriptionHtml"  => JSON::Any.new(description_html || "<p></p>"),
-      "shortDescription" => JSON::Any.new(short_description.try &.as_s || nil),
+      "shortDescription" => JSON::Any.new(short_description.try &.as_s || ""),
       # Video metadata
       "genre"     => JSON::Any.new(genre.try &.as_s || ""),
       "genreUcid" => JSON::Any.new(genre_ucid.try &.as_s?),
